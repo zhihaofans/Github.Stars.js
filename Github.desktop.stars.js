@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github.desktop.stars.js
 // @namespace    http://zhihaofans.com
-// @version      0.0.1
+// @version      0.0.2
 // @description  在Github首页显示stars列表
 // @author       zhihaofans
 // @match        https://github.com/
