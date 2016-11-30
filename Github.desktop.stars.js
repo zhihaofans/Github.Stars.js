@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Github.Stars.js
+// @name         Github.desktop.stars.js
 // @namespace    http://zhihaofans.com
 // @version      0.0.1
 // @description  在Github首页显示stars列表
@@ -8,7 +8,7 @@
 // @grant        none
 // @require      https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js
 // @note         Greasyfork地址:https://greasyfork.org/zh-CN/scripts/25101
-// @note         Github地址:https://github.com/zhihaofans/Github.Stars.js
+// @note         Github地址:https://github.com/zhihaofans/Github.desktop.stars.js
 // ==/UserScript==
 var username="";
 function CheckLogin(){
@@ -45,7 +45,7 @@ function initlist(_username){
         if(starlen>itemlimit){
             hideitems='<span id="hidestars" style="display: none;">'+hideitem+'</span>';
         }
-        var listhtml='<div class="boxed-group js-repo-filter flush" role="navigation" id="yourstars"><div class="boxed-group-action"><a href="/'+username+'?tab=stars" class="btn btn-sm btn-primary">              Show all stars</a></div><h3> Your stars <span class="counter"> '+String(itemlimit)+'/'+String(starlen)+'</span></h3><div class="boxed-group-inner"><ul class="mini-repo-list js-repo-list">'+items+hideitems+'</ul></div></div>';
+        var listhtml='<div class="boxed-group js-repo-filter flush" role="navigation" id="yourstars"><div class="boxed-group-action"><a href="/'+username+'?tab=stars" class="btn btn-sm btn-primary">              Show all stars</a></div><h3> Starred repositories <span class="counter"> '+String(itemlimit)+'/'+String(starlen)+'</span></h3><div class="boxed-group-inner"><ul class="mini-repo-list js-repo-list">'+items+hideitems+'</ul></div></div>';
         var listdata=jQuery(".dashboard-sidebar.column.one-third").html();
     jQuery(".dashboard-sidebar.column.one-third").html(listhtml+listdata);
     });
